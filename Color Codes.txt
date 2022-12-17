@@ -1,0 +1,9 @@
+----------------------------- FOODIE -----------------------------
+
+  --primary-color: #e7454d;
+  --primary-color-low: rgba(219, 46, 55, 0.9);
+  --secondary-color: #2a2a2a;
+  --off-white-light: #fbf5e5;
+  --off-white-dark: #f0e7cc;
+
+------------------- youtube.com/shahsaminyasar -------------------
