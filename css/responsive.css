@@ -1,0 +1,286 @@
+/* Variables */
+:root {
+  --primary-color: #e7454d;
+  --primary-color-low: rgba(219, 46, 55, 0.9);
+  --secondary-color: #2a2a2a;
+  --off-white-lighter: #fbf5e5;
+  --off-white-darker: #f0e7cc;
+}
+/* Variables */
+
+@media screen and (max-width: 900px) {
+  /* Popular Dishes Starts */
+  .popular-dishes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popular-dish {
+    width: 300px;
+    gap: 10px;
+  }
+  /* Popular Dishes Ends */
+}
+
+@media screen and (max-width: 850px) {
+  html {
+    font-size: 16px;
+  }
+
+  /* Header Starts */
+  #header {
+    padding: 10px;
+    background: var(--primary-color);
+  }
+
+  #header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #home .container h1 {
+    font-size: 13.625rem;
+  }
+
+  #header .container .logo a img {
+    width: 150px;
+    margin-top: -7px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: translateX(0px);
+  }
+
+  .mobile-menu-btn .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    margin: 5px;
+  }
+
+  .mobile-menu-btn .bar:nth-child(2) {
+    width: 18px;
+    transform: translateX(7px);
+  }
+
+  .mobile-menu-btn .bar:nth-child(3) {
+    width: 12px;
+    transform: translateX(13px);
+  }
+
+  .mobile-menu-btn.menuActive {
+    transform: translateX(35px);
+  }
+
+  .mobile-menu-btn.menuActive .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(35px) translateX(-25px);
+  }
+
+  .mobile-menu-btn.menuActive .bar:nth-child(2) {
+    width: 25px;
+    transform: translateX(-41px) rotate(-45deg) translateY(-2px);
+  }
+
+  .mobile-menu-btn.menuActive .bar:nth-child(3) {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+
+  #header .container .navlinks {
+    position: fixed;
+    background: var(--primary-color-low);
+    top: 85px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transform: translateX(-100%);
+  }
+
+  #header .container .navlinks.menuActive {
+    transform: translateX(0px);
+  }
+
+  #header .container .navlinks ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #header .container .navlinks ul li a,
+  #header.header-scrolled .container .navlinks ul li a {
+    font-size: 2.1rem;
+  }
+  /* Header Ends */
+
+  /* Home Starts */
+  #home {
+    min-height: fit-content;
+    padding: 100px 20px 100px;
+  }
+  /* Home Ends */
+
+  /* Popular Dish Starts */
+  .popular-dish_image {
+    width: 240px;
+    height: 240px;
+  }
+  /* Popular Dish Ends */
+
+  /* Statistics Starts */
+  .statistics_columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .statistics_column {
+    width: 150px;
+    height: 150px;
+  }
+
+  .statistics_column span {
+    font-size: 1.82rem;
+  }
+  /* Statistics Ends */
+
+  /* Menu Starts */
+  .menu {
+    gap: 50px;
+  }
+  /* Menu Ends */
+
+  /* Featured Starts */
+  #featured {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .featured-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: repeating-linear-gradient(
+        to right,
+        var(--primary-color-low),
+        var(--primary-color-low) 50%,
+        white 50%,
+        white
+      ),
+      url(../images/featured-section-greyscale.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+  }
+
+  .featured-content {
+    position: absolute;
+    transform: scale(1) translateX(-50%) translateY(-50%);
+    border-radius: 12px;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    /* box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); */
+  }
+  /* Featured Ends */
+
+  /* Packages Starts */
+  .packages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .package {
+    width: 260px;
+  }
+  /* Packages Ends */
+
+  /* Newsletter Starts */
+  .newsletter-form {
+    width: 90%;
+  }
+
+  .newsletter-form .cta-btn {
+    padding: 12px 40px;
+  }
+  /* Newsletter Ends */
+
+  /* Footer Starts */
+  #footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Footer Ends */
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home .container h1 {
+    font-size: 12.625rem;
+  }
+
+  #home .container p {
+    margin: -20px 0px 20px;
+  }
+
+  /* Menu Starts */
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .menu_item_text p {
+    font-size: 1.32rem;
+  }
+  /* Menu Ends */
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cta-btn {
+    padding: 12px 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #home .container h1 {
+    font-size: 10.625rem;
+  }
+
+  /* Footer Starts */
+  #footer .container {
+    grid-template-columns: 1fr;
+  }
+  /* Footer Ends */
+}
+
+
+
+/* SHAH SAMIN YASAR on YouTube | youtube.com/shahsaminyasar */
